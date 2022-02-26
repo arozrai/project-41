@@ -110,9 +110,17 @@ class Game{
             }
         }
 
+        if(allPlayers.player1.index == ""){
+            gameState=2;
+            game.update(2);
+            this.end();
+        }
+
         // Add code for game end condition
         if(player.score >= 20){
-            this.end()
+            gameState=2;
+            game.update(2);
+            this.end();
         }
 
 
@@ -121,10 +129,16 @@ class Game{
     end(){
 
        // Add code to update game state and display Game Over
-        game.update(2)
         clear()
         fill("blue")
         textSize(40)
+        form.hide()
         text("Game Over",350,300)
+        if(allPlayers.player1.score>allPlayers.player2.score){
+            text(allPlayers.player1.name+" won!",400,350)
+        }
+        if(allPlayers.player1.score<allPlayers.player2.score){
+            text(allPlayers.player1.name+" won!",400,350)
+        }
     }
 }

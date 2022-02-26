@@ -43,7 +43,7 @@ function draw() {
   if (gameState === 2) {
     game.end();
   }
-  if (playerCount === 2) {
+  if (playerCount === 2 && gameState===0) {
     game.update(1);
   }
 }

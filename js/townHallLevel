@@ -1,0 +1,9 @@
+villageHall=int(input("What town hall level are you in clash of clans?"))
+
+if(villageHall>9):
+    print("You are a skilled player")
+elif(villageHall>4):
+    print("You are an average player")
+else:
+    print("You are a new player")
+
