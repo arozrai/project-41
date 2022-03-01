@@ -110,12 +110,6 @@ class Game{
             }
         }
 
-        if(allPlayers.player1.index == ""){
-            gameState=2;
-            game.update(2);
-            this.end();
-        }
-
         // Add code for game end condition
         if(player.score >= 20){
             gameState=2;
